@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="363.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.MachinistController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="L1" prefHeight="24.0" prefWidth="600.0" text="Label" />
+                              <Label fx:id="L2" prefHeight="25.0" prefWidth="602.0" text="Label" />
+                              <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="N1" prefWidth="27.0" text="№" />
+                                  <TableColumn fx:id="Km1" prefWidth="106.0" text="Километр" />
+                                    <TableColumn fx:id="Pi1" prefWidth="114.0" text="Piket" />
+                                    <TableColumn fx:id="AL1" prefWidth="134.0" text="AЛСН" />
+                                    <TableColumn fx:id="NS1" prefWidth="120.0" text="Номер секции" />
+                                    <TableColumn fx:id="Li1" prefWidth="98.0" text="Светофор" />
+                                </columns>
+                              </TableView>
+                              <HBox prefHeight="29.0" prefWidth="600.0">
+                                 <children>
+                                    <TextField fx:id="id2" prefHeight="23.0" prefWidth="28.0" />
+                                    <TextField fx:id="km" prefHeight="23.0" prefWidth="117.0" />
+                                    <TextField fx:id="piket" prefHeight="23.0" prefWidth="108.0" />
+                                    <TextField fx:id="alsn" prefHeight="23.0" prefWidth="125.0" />
+                                    <TextField fx:id="nomer" prefHeight="23.0" prefWidth="131.0" />
+                                    <TextField fx:id="light" prefHeight="23.0" prefWidth="87.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_CENTER" prefHeight="56.0" prefWidth="600.0">
+                                 <children>
+                                    <Button fx:id="del" contentDisplay="CENTER" mnemonicParsing="false" onAction="#B1del" prefHeight="23.0" prefWidth="146.0" text="Удалить" />
+                                    <Button fx:id="add" contentDisplay="CENTER" mnemonicParsing="false" onAction="#B1add" prefHeight="23.0" prefWidth="137.0" text="Добавить" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

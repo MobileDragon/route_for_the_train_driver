@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.FxmlFormsController">
+  <children>
+    <TabPane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Сорздать маршрут">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ToolBar layoutX="0.0" layoutY="0.0" minHeight="14.0" orientation="HORIZONTAL" prefHeight="32.0" prefWidth="600.0">
+                  <items>
+                    <ChoiceBox fx:id="ChoiceTrain" prefHeight="23.0" prefWidth="180.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Item 1" />
+                          <String fx:value="Item 2" />
+                          <String fx:value="Item 3" />
+                        </FXCollections>
+                      </items>
+                    </ChoiceBox>
+                    <ChoiceBox fx:id="ChoiceM" prefHeight="23.0" prefWidth="180.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Item 1" />
+                          <String fx:value="Item 2" />
+                          <String fx:value="Item 3" />
+                        </FXCollections>
+                      </items>
+                    </ChoiceBox>
+                    <DatePicker fx:id="Datek" minHeight="19.0" prefHeight="22.0" prefWidth="107.0" />
+                              <TextField fx:id="TimeOut" prefHeight="23.0" prefWidth="103.0" promptText="ЧЧ:ММ отбытия" />
+                  </items>
+                </ToolBar>
+                        <SplitPane dividerPositions="0.49331103678929766" layoutY="31.0" prefHeight="341.0" prefWidth="600.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView fx:id="tableWay" layoutY="6.0" prefHeight="274.0" prefWidth="292.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="stationColumn" prefWidth="75.0" text="Станция" />
+                                        <TableColumn fx:id="timeAColumn" prefWidth="115.0" text="Время прибытия" />
+                                          <TableColumn fx:id="timeWColumn" prefWidth="98.0" text="Время отстоя" />
+                                      </columns>
+                                    </TableView>
+                                    <VBox layoutX="1.0" layoutY="278.0" prefHeight="59.0" prefWidth="291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="28.0" prefWidth="292.0">
+                                             <children>
+                                                <TextField fx:id="Station" onKeyReleased="#TStationRel" prefHeight="24.0" prefWidth="59.0" promptText="станция" />
+                                                <Label fx:id="TimeArrival" prefHeight="22.0" prefWidth="136.0" text="чч:мм/дд:мм:гггг прибытия" textFill="#b9b9b9">
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="TimeWait" onKeyReleased="#TWaitRel" prefHeight="23.0" prefWidth="98.0" promptText="ЧЧ:ММ отстоя" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="TOP_CENTER" prefHeight="21.0" prefWidth="290.0">
+                                             <children>
+                                                <Button fx:id="add" mnemonicParsing="false" onAction="#B1add" prefHeight="27.0" prefWidth="92.0" text="добавить">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="del" mnemonicParsing="false" onAction="#B2del" prefHeight="27.0" prefWidth="88.0" text="удалить">
+                                                   <font>
+                                                      <Font name="Calibri" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="take" mnemonicParsing="false" onAction="#B3take" prefHeight="27.0" prefWidth="103.0" text="Утвердить!">
+                                                   <font>
+                                                      <Font name="Calibri Bold Italic" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane fx:id="pictureWall" minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="300.0" />
+                          </items>
+                        </SplitPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Посмотреть">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="Удалить">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
